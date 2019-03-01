@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-77-uma">
-                                                    <rect key="frame" x="136" y="10" width="258" height="36"/>
+                                                    <rect key="frame" x="136" y="10" width="258" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -55,6 +55,7 @@
                                             <outlet property="posterView" destination="YLS-8c-slk" id="kTQ-do-nL3"/>
                                             <outlet property="synopsisLable" destination="goO-qy-bYD" id="sKa-ev-Lw3"/>
                                             <outlet property="titleLable" destination="ogU-77-uma" id="rGf-PW-iby"/>
+                                            <segue destination="eCD-XL-Kl8" kind="show" id="HWE-Ex-UxY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -71,6 +72,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGC-Rb-Kdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="40.929535232383813"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="AmO-zb-S2v">
+            <objects>
+                <viewController id="eCD-XL-Kl8" customClass="MovieDetailsViewController" customModule="flixter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rzC-VC-7Zi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BVn-g6-E66"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObV-nY-Jem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1520" y="45"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6qY-RQ-v9A">
