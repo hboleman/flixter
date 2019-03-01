@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class MovieGridViewController: UIViewController {
+class MovieGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // An array of dictionaries
     var movies = [[String:Any]]();
+    
+    // Outlets
+    @IBOutlet weak var collectionView: UICollectionView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
+        
         // Do any additional setup after loading the view.
         
         // Networking Code
@@ -32,10 +40,31 @@ class MovieGridViewController: UIViewController {
                 
                 // Store the movies in a property to use elsewhere
                 self.movies = dataDictionary["results"] as! [[String:Any]];
-                print(self.movies);
+                
+                self.collectionView.reloadData();
+                //print(self.movies);
             }
         }
         task.resume()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell;
+        
+        let movie = movies[indexPath.item];
+        
+        // URL Logic
+        let baseURL = "https://image.tmdb.org/t/p/w185";
+        // Set poster image
+        let posterPath = movie["poster_path"] as! String;
+        let posterUrl = URL(string: baseURL + posterPath);
+        cell.posterView.af_setImage(withURL: posterUrl!);
+        
+        return cell;
     }
     
 
