@@ -7,15 +7,43 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieDetailsViewController: UIViewController {
-
+    
+    // Outlets
+    @IBOutlet weak var backdropView: UIImageView!
+    @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var synopsisLable: UILabel!
+    
+    
+    
+    // Dictionary
     var movie: [String:Any]!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(movie["title"]);
+        
+        // Define Variables
+        titleLable.text = movie["title"] as? String;
+        titleLable.sizeToFit();
+        
+        synopsisLable.text = movie["overview"] as? String;
+        synopsisLable.sizeToFit();
+        
+        // URL Logic
+        let baseURL = "https://image.tmdb.org/t/p/w185";
+        // Set poster image
+        let posterPath = movie["poster_path"] as! String;
+        let posterUrl = URL(string: baseURL + posterPath);
+        posterView.af_setImage(withURL: posterUrl!);
+        // Set backdrop image
+        let backdropPath = movie["backdrop_path"] as! String;
+        let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath);
+        backdropView.af_setImage(withURL: backdropUrl!);
+        print("Backdrop URL: \(backdropUrl)");
     }
     
 
