@@ -11,7 +11,7 @@ import AlamofireImage
 
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // An array of dictionaries   
+    // An array of dictionaries
     var movies = [[String:Any]]();
     
     // Outlets
