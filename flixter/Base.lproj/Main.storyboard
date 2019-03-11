@@ -29,26 +29,41 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-77-uma">
-                                                    <rect key="frame" x="136" y="10" width="258" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-77-uma">
+                                                    <rect key="frame" x="115" y="8" width="291" height="29"/>
+                                                    <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goO-qy-bYD">
-                                                    <rect key="frame" x="136" y="55" width="258" height="91"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goO-qy-bYD">
+                                                    <rect key="frame" x="115" y="55" width="291" height="91"/>
+                                                    <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLS-8c-slk">
-                                                    <rect key="frame" x="20" y="10" width="99" height="136"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YLS-8c-slk">
+                                                    <rect key="frame" x="8" y="8" width="99" height="143.5"/>
                                                     <color key="backgroundColor" red="0.56911879779999996" green="0.82907623050000001" blue="0.46586191649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="99" id="Aol-Vj-zfM"/>
+                                                        <constraint firstAttribute="height" constant="143.5" id="GMg-U8-IVC"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YLS-8c-slk" secondAttribute="bottom" constant="8" id="6wZ-Ru-l1n"/>
+                                                <constraint firstItem="goO-qy-bYD" firstAttribute="leading" secondItem="ogU-77-uma" secondAttribute="leading" id="BvA-Ee-DyA"/>
+                                                <constraint firstAttribute="trailing" secondItem="ogU-77-uma" secondAttribute="trailing" constant="8" id="Lg5-cg-oRh"/>
+                                                <constraint firstItem="YLS-8c-slk" firstAttribute="leading" secondItem="XbV-TU-wfn" secondAttribute="leading" constant="8" id="OzZ-VS-CdE"/>
+                                                <constraint firstItem="YLS-8c-slk" firstAttribute="top" secondItem="XbV-TU-wfn" secondAttribute="top" constant="8" id="UHn-Q4-0Qd"/>
+                                                <constraint firstAttribute="trailing" secondItem="goO-qy-bYD" secondAttribute="trailing" constant="8" id="Ypw-jf-chP"/>
+                                                <constraint firstItem="goO-qy-bYD" firstAttribute="top" secondItem="ogU-77-uma" secondAttribute="bottom" constant="8" id="evo-8E-Ytl"/>
+                                                <constraint firstItem="ogU-77-uma" firstAttribute="leading" secondItem="YLS-8c-slk" secondAttribute="trailing" constant="8" id="gmv-xx-Trk"/>
+                                                <constraint firstItem="ogU-77-uma" firstAttribute="top" secondItem="YLS-8c-slk" secondAttribute="top" id="iAd-C0-aWe"/>
+                                                <constraint firstAttribute="bottom" secondItem="goO-qy-bYD" secondAttribute="bottom" id="tgc-W5-Yh4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="posterView" destination="YLS-8c-slk" id="kTQ-do-nL3"/>
